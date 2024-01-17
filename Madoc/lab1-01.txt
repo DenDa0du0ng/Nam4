@@ -1,0 +1,31 @@
+Lab1.1: 
+-Sử dụng có chữ kí, signature mà cacs 
++signature: dấu hiệu nhận biết của mã độc đấy
+Có 52/74 enzim được phát hiện 
+
+-các tệp này được biên dịch khi nào?
+Tệp lab1-01.exe được biên dịch 2010/12/19 Sun 16:16:19 UTC
+Tệp lab1-01.dll được biên dịch 2010/12/19 Sun 16:16:38 UTC
+
+-Dấu hiệu nào cho thấy bị đóng gói hay xáo trộn không? Chỉ ra
+-lab1-01.exe không bị đóng gói, xáo trộn vì:
+	+đọc được mã nguồn được viết bởi C++
+	+Vitual Size và Size of Raw data xấp xỉ nhau 
+	=>file không bị đóng gói
+UPX là công cụ để nén trên linux dùng lệnh
+
+-có bất kì import nào nghi ngờ là mã độc không? nêu ra
+Trên file lab1-01.exe
++Nghi ngờ import kerne132.dll là mã đọc giả mạo kernel32.dll
++Nghi ngờ import Lab01-01.DLL là mã độc	
+
+-Có bất kì tệp nào, chỉ báo nào dựa trên máy chủ (host)
+depend
+Có 2 tệp kerne123.dll và Lab01-01.DLL
++cái nào có thể làm chỉ báo được trên máy chủ, cái nào chỉ báo ở trên mạng
+-có các chỉ báo nào dựa trên mạng có thể sử dụng để phát hiện 
+Trên filelab1-01.dll thấy địa chỉ ip 127.26.152.13
+-phỏng đoán tệp tin về 
+Lab1-01.exe và Lab1-01.dll là file độc hại 
+phát hiện thấy string sleep có thể nó sẽ thực thi 1 số ctrinh cùng với chức năng ngủ, chờ đến khi đoạn mã độc thực hiện xong
+
