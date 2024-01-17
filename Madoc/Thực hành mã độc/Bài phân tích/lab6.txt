@@ -1,0 +1,19 @@
+1, file nào được tạo ra khi chạy mã độc
+msgina32.dll
+
+2,đường dẫn registry mã độc tác động đến
+HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+
+3,các hàm nào import trong dll mã độc để tác động đến registry
+RegCreateKeyExA and RegSetValueExA từ ADVAPI32.dll
+
+4,mã băm của file mã độc tạo ra là gì
+MD5: 	7ce4f799946f0fa44e5b2b5e6a702f27
+SHA256: f8a4f61bccd5bab1cad0ab9e57f6f3092a8bd4dd0adfcd4853e89ba96afc93f9
+
+
+
+5,"this program can not be run in DOS mode" nghĩa là gì
+đây là sơ khai để in thông báo nếu chương trình được chạy trong MS-DOS. 
+Điều này được bao gồm trong tiêu đề DOS của tất cả các tệp PE - gợi ý rằng tài nguyên nhị phân là một tệp thực thi ẩn!
+
