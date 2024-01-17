@@ -1,0 +1,33 @@
+Đề 01
+Câu 1: Khái niệm ngăn xếp (Stack)? Trình bày chức năng của ngăn xếp và các theo tác trên ngăn xếp? Ví dụ
+Câu 2: Định nghĩa lỗi và lỗ hổng phần mềm? Trình bày khái niệm và cách thức khai thác các lỗ hổng Buffer Overflow?
+Câu 4: Trình bày khái niệm lỗ hổng dư 1, Chỉ ra ví dụ về lỗ hổng dư 1
+Câu 3: Phân tích lỗi và các lỗ hổng trong chương trình sau, nêu các giải pháp và khắc phục
+#include<stdio.h>
+char *p1 = "good";
+char *p2 = "hacker"
+int main (){
+	char buf[256];
+	printf("There's a secrect at p and p \n", p1, p2);
+	printf("Enter some magic to get:");
+	fget(buf, sizeof(buf),stdin);
+	prinf(buf);
+	return 0;
+}
+- Lỗ hổng format string 
+Đề 02
+Câu 1: Khái niệm hàm(proceduce),cấu trúc hàm, gọi hàm, ví dụ 
+Câu 2: Khái niệm lỗi và lỗ hổng phần mềm? Trình bày khái niệm và cách thức khai thác các lỗ hổng FormatString
+Câu 3: Phân tích lỗi và các lỗ hổng trong chương trình sau, nêu các giải pháp và khắc phục
+int main (){
+	int cookie = 0
+	char buf[10];
+	printf("Your name");
+	gets(buf);
+	if(cookie = 0x11121214)
+		puts("you win!");
+	else
+		puts("Try again");
+	return 0;
+}
+Câu 4. Race condition và ví dụ về lỗ hổng trường hợp đua
