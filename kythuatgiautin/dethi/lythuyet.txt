@@ -1,0 +1,66 @@
+câu 1: Nêu khái niệm giấu tin. Vẽ mô hình giấu tin cơ bản
+
+	Gi ấu tin là nghệ thuật giấu 1 mẩu tin vào 1 đối tượng mạng tin khác
+	Gi ấu tin số là kỹ thuật nhứng 1 dữ liệu số vào 1 đối tượng số mang tin khác
+
+Câu 2: trình bày sự phân loại các kĩ thuật thủy vân. So sánh thủy  vân trên miền ko gian và thủy vân trên miền tần số
+
+	Sự phân loại các kĩ thuật thủy vân:
+	-Thủy vân trên miền không gian
+	+ Sửa đổi trực tiếp các giá trị điểm ảnh trên miền không gian ảnh
+	+Thường đơn giản và không cần ảnh phủ để trích xuất thủy vân
+	+Không bền vững đối với các phép xử lí ảnh. Vì thủy vân ko đc phân phối trên toàn ảnh. Các phép xử lí ảnh dễ dàng bị phá hủy
+	+Phương pháp: Thay thế, cộng
+	-Thủy vân trên miền tần số
+	+Điểm ảnh đc chuyển sang miền tần số bởi các phép biến đổi: DFT, DWT, DCT
+	+Chèn 1 thủy vân vào các hệ số tần số: thường nhúng vào các thành phần có tần số thấp hoặc các thành phần tần số chứa thông tin quan trọng trong ảnh
+	-kết hợp thủy vân trên miền không gian và thủy vân trên miền tần số
+	+Nhăm giải quyết nhược điểm của 2 phương pháp thủy vân trên ko gian và tần số
+	+Phụ thuộc vào yêu cầu của ng dùng và phụ thuộc và ứng dụng trong việc phân tách ảnh thủy vân thành 2 phần để chèn vào miền ko gian và miền tần số
+	-Thủy vân dễ vỡ
+	+Xử lý ảnh dựa trên máy tính ngày càng phổ biến nên có rất nhiều công cụ phần mềm hỗ trợ
+	-> Cần phải đánh giá liệu ảnh nhận đc có bị sửa đổi trong quá trình truyền tin hay ko
+	+Sau khi đc nhúng vào ảnh phủ nó dễ dàng bị thay đổi nếu có bất cứ tác động nào lên ảnh
+	-> Chỉ cần đánh giá thủy vân đc giấu trong ảnh sẽ biết đc ảnh có bị biến đổi hay ko
+	-Thủy vân bền vững
+	+Có khả năng đảm bảo an toàn cho dữ liệu như 1 biện pháp bảo vệ bản qyền
+	+2 cách tiếp cận: Khai thác thông tin dư thừa; dựa trên trải phổ
+
+	So sánh thủy vân trên miền không gian và thủy vân trên miền tần số
+	Thủy vân trên miền tần số thường bền vững hơn trước các phép biến đổi ảnh. Vì năng lượng của ảnh tập trung vào các thành phần có tần số thấp. Nhúng vào các tần số này thì những biến đổi sẽ đc phân phối trên toàn bộ ảnh
+	Thủy vân trên miền tần số phức tạp hơn, dung lượng nhúng ít hơn so với thủy vân trên miền không gian
+
+
+Câu 3: Nêu khái niệm thủy vân. So sánh thủy vân với ẩn mã
+	Thủy vân số là kỹ thuật nhứng 1 dữ liệu số vào 1 đối tượng số mang tin khác với mục đích bảo vệ bản quyền của chủ sở hữu
+	SO SÁNH
+	Ẩn mã
+-Mục đích: bảo vệ thông tin đc giấu
+-Dung lượng nhúng: càng nhiều càng tốt
+-Độ trong suốt: Phải ẩn
+-Chỉ tiêu quan trọng nhất: Dung lượng nhúng
+
+	Thủy vân số
+-Mục đích: Bảo vệ môi trường chứa
+-Dung lượng nhúng: Đủ để xác thực đc bản quyền của chủ sở hữu
+-Độ trong suốt: tùy vào hệ thống
+-Chỉ tiêu quan trọng nhất: Tính bền vững
+
+Câu 4: Vẽ sơ đồ kết hợp ẩn mã và mật mã có sửa vật phủ. Mô hình này có ưu điểm gì so với mô hình ẩn mã thông thường
+
+	Mô hình này có ưu điểm so với mô hình ẩn mã thông thường là thông điệp được mã hóa trước khi nhúng tin với mục đích làm khó khăn trong việc phát hiện ra thông điệp được nhúng trong vật mang tin
+
+Câu 5: Định nghĩa ẩn mã thuần túy. Tại sao lực lượng vật phủ ít nhất phải bằng lực lượng của thông điệp
+
+	Định nghĩa ẩn mã thuần túy:
+	C là tập các vật phủ
+	M là tập các thông điệp
+	|C| >= |M|
+	E=C x M -> C là hàm nhúng tin
+	D=C -> M là hàm trích xuất
+	D(E(c,m))=m với mọi c thuộc C, m thuộc M
+
+	Lực lượng vật phủ ít nhất phải bằng lực lượng của thông điệp vì nếu lực lượng vật phủ ko đủ lớn, thông điệp có thể bị lộ ra hoặc bị thay đổi
+
+Câu 6: Nêu khái niệm LSB, kỹ thuật LSB, ưu nhược điểm. cho VD
+Câu 7: Tại sao các thuật toán ẩn mã, ngt thường kết hợp với mật mã? Việc kết hợp ẩn mã với mật mã ko sửa vật phủ có những lợi ích gì
